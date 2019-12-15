@@ -36,6 +36,11 @@ export default class App extends React.Component {
           <WordGenerator title='Vowels' words={alphabets.default.vowels}></WordGenerator>
           <WordGenerator title='Consonents' words={alphabets.default.consonant}></WordGenerator>
           <WordGenerator title='Alphabets' words={alphabets.default.alphabets}></WordGenerator>
+          <WordGenerator title='Vowel A Combinations' words={alphabets.default.ACombo}></WordGenerator>
+          <WordGenerator title='Vowel E Combinations' words={alphabets.default.ECombo}></WordGenerator>
+          <WordGenerator title='Vowel I Combinations' words={alphabets.default.ICombo}></WordGenerator>
+          <WordGenerator title='Vowel O Combinations' words={alphabets.default.OCombo}></WordGenerator>
+          <WordGenerator title='Vowel U Combinations' words={alphabets.default.UCombo}></WordGenerator>
         </Content>
       </Container>
     );
