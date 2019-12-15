@@ -1,8 +1,7 @@
 import React from 'react';
 import { Container, Header, Content, Left, Body, Right, Card, CardItem, Title, Text } from 'native-base';
 import * as Font from 'expo-font'
-import * as alphabets from './alphabets'
-import {random} from './common'
+import * as alphabets from './alphabets' 
 import WordGenerator from './wordgenerator';
 
 

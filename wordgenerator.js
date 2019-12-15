@@ -6,10 +6,8 @@ import { random } from './common'
 export default class WordGenerator extends Component {
 
  constructor(props) {
-    super(props);
-     
-    const item = this.randomWordSelect(props.words); 
-    this.state = {randomword: item.selectedword, availablewords: item.remainingwords};
+    super(props); 
+    this.state = {randomword: props.words, availablewords: props.words};
     this.onclick = this.onclick.bind(this);
   }
 
@@ -39,16 +37,39 @@ export default class WordGenerator extends Component {
     }; 
   }
 
+  renderWords(words){
+    let elements = [];
+
+    if(Array.isArray(words)){
+      words.map(value => {
+        const item = (<CardItem>
+        <Body> 
+          <Text>{value}</Text>
+        </Body>
+    </CardItem>);
+  
+          elements.push(item);
+      });
+    }
+    else{
+      const item = (<CardItem>
+        <Body> 
+          <Text>{words}</Text>
+        </Body>
+    </CardItem>);
+  
+          elements.push(item);
+    }
+    
+
+    return elements;
+  }
   render(){
     return ( 
         <TouchableNativeFeedback onPress={this.onclick}>
           <Card>
               <CardItem header><Text>{this.props.title}</Text></CardItem>
-              <CardItem>
-                  <Body> 
-                    <Text>{this.state.randomword}</Text>
-                  </Body>
-              </CardItem>
+              {this.renderWords(this.state.randomword)}
           </Card> 
         </TouchableNativeFeedback>
     );
