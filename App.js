@@ -33,9 +33,9 @@ export default class App extends React.Component {
           <Right></Right>
         </Header>
         <Content>
-          <WordGenerator title='Vowels' initialtext={alphabets.default.vowels[0]} words={alphabets.default.vowels} wordselector={() => parseInt(random(0, 5))}></WordGenerator>
-          <WordGenerator title='Consonents' initialtext={alphabets.default.consonant[0]} words={alphabets.default.consonant} wordselector={() => parseInt(random(0, 20))}></WordGenerator>
-          <WordGenerator title='Alphabets' initialtext={alphabets.default.alphabets[0]} words={alphabets.default.alphabets} wordselector={() => parseInt(random(0, 27))}></WordGenerator>
+          <WordGenerator title='Vowels' words={alphabets.default.vowels}></WordGenerator>
+          <WordGenerator title='Consonents' words={alphabets.default.consonant}></WordGenerator>
+          <WordGenerator title='Alphabets' words={alphabets.default.alphabets}></WordGenerator>
         </Content>
       </Container>
     );
