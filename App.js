@@ -4,6 +4,10 @@ import LettersSound from './phonetics/lettersound';
 import TwoLettersSound from './phonetics/twolettersound';
 import VowelsSound from './phonetics/vowelssound';
 import * as Font from 'expo-font'
+import * as alphabets from './alphabets'
+import {random} from './common'
+import WordGenerator from './wordgenerator';
+
 
 export default class App extends React.Component {
   constructor(props) {
@@ -32,29 +36,12 @@ export default class App extends React.Component {
           <Right></Right>
         </Header>
         <Content>
-          
-          <Card>
-            <CardItem header>
-              <Text>Letter Sounds</Text>
-            </CardItem>
-              <Body>
-                <LettersSound></LettersSound>
-              </Body>
-            <CardItem>
-            </CardItem>
-          </Card>
-          <Card>
-          <CardItem header>
-            <Text>2 Letter Words</Text>
-          </CardItem>
-            <Body>
-              <TwoLettersSound></TwoLettersSound>
-            </Body>
-          <CardItem>
-          </CardItem>
-        </Card>
+          <WordGenerator title='Vowels' initialtext={alphabets.default.vowels[0]} words={alphabets.default.vowels} wordselector={() => parseInt(random(0, 5))}></WordGenerator>
+          <WordGenerator title='Consonents' initialtext={alphabets.default.consonant[0]} words={alphabets.default.consonant} wordselector={() => parseInt(random(0, 20))}></WordGenerator>
+          <WordGenerator title='Alphabets' initialtext={alphabets.default.alphabets[0]} words={alphabets.default.alphabets} wordselector={() => parseInt(random(0, 27))}></WordGenerator>
         </Content>
       </Container>
     );
   }
 }
+

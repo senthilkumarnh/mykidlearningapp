@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { TouchableNativeFeedback} from 'react-native';
 import { Card, CardItem, Body, Text} from 'native-base'
 import * as data from '../alphabets'
-import random from '../common'
+import {random} from '../common'
 
 export default class VowelsSound extends Component {
   state = { currentletter: 'Vowels' };
@@ -18,7 +18,7 @@ export default class VowelsSound extends Component {
   render(){
     return ( 
         <Card>
-            <CardItem header>Vowels</CardItem>
+            <CardItem header><Text>Vowels</Text></CardItem>
             <CardItem>
                 <Body>
                     <TouchableNativeFeedback onPress={this.onclick}>
