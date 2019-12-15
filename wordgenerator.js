@@ -18,8 +18,7 @@ export default class WordGenerator extends Component {
   
     let remainingWordList = item.remainingwords;
  
-    if(remainingWordList.length === 0){
-      console.log('List is empty')
+    if(remainingWordList.length === 0){ 
       remainingWordList = this.props.words;
     }
     
