@@ -1,8 +1,5 @@
 import React from 'react';
 import { Container, Header, Content, Left, Body, Right, Card, CardItem, Title, Text } from 'native-base';
-import LettersSound from './phonetics/lettersound';
-import TwoLettersSound from './phonetics/twolettersound';
-import VowelsSound from './phonetics/vowelssound';
 import * as Font from 'expo-font'
 import * as alphabets from './alphabets'
 import {random} from './common'
